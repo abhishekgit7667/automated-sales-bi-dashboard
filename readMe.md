@@ -1,152 +1,226 @@
-# Automated Sales & Business Intelligence Dashboard
+# Automated Sales BI Dashboard
 
-An **end-to-end data analytics project** that analyzes retail sales data and builds a **business intelligence dashboard** using **Python, SQL, and Power BI**.
+An End-to-End Data Analytics and Business Intelligence Project built using Python, MySQL, SQL, and Power BI to analyze retail sales data and generate business insights.
 
-This project simulates how data analysts work in real companies by performing **data cleaning, SQL-based analysis, and interactive dashboard visualization** to generate business insights.
-
----
+This project simulates a real industry workflow where raw data is cleaned, processed, stored in a database, analyzed with SQL, and visualized using an interactive dashboard.
 
 # Project Objective
 
-The objective of this project is to analyze retail sales data and generate meaningful insights that help businesses understand:
+The goal of this project is to transform raw sales data into meaningful insights that help answer key business questions such as:
 
-* Sales performance
-* Profitability trends
-* Regional performance
-* Product-level insights
-* Discount impact on profitability
+-How sales change over time
 
-The project demonstrates a **complete data analytics workflow from raw data to business dashboard**.
+-Which regions generate the most revenue
 
----
+-Which categories produce the highest profit
 
-# Tools & Technologies
+-Which products perform best
 
-* Python (Pandas, NumPy)
-* SQL (MySQL)
-* Power BI
-* Git & GitHub
-* Jupyter Notebook
+## Technologies Used
 
----
+-Python
 
-# Project Architecture
+-Pandas
 
-This project follows an **end-to-end analytics architecture**:
+-NumPy
 
-Raw Data → Python Data Cleaning → MySQL Database → SQL Business Analysis → Power BI Dashboard → Business Insights
+-MySQL
 
-### Architecture Layers
+-SQL
 
-**1. Data Source Layer**
+-Power BI
 
-* Raw retail sales dataset stored in CSV format
-
-**2. Data Processing Layer**
-
-* Python used for:
-* Data loading
-* Data cleaning
-* Handling missing values
-* Feature engineering
-
-**3. Storage Layer**
-
-* Cleaned dataset stored in MySQL database
-
-**4. Analysis Layer**
-
-* SQL queries used to calculate business KPIs and insights
-
-**5. Visualization Layer**
-
-* Power BI dashboard created to visualize business performance
-
-**6. Automation Layer**
-
-* Python scripts automate data processing and reporting tasks
-
----
+-Git & GitHub
 
 # Project Workflow
 
-1. Data Collection
-2. Data Understanding using Python
-3. Data Cleaning and Feature Engineering
-4. Data Import into MySQL
-5. SQL Business Analysis
-6. KPI and Insight Generation
-7. Power BI Dashboard Development
-8. Business Reporting
+Raw Sales Data (CSV)
+        ↓
+Python Data Cleaning
+        ↓
+Feature Engineering
+        ↓
+MySQL Database
+        ↓
+SQL Analysis
+        ↓
+Power BI Dashboard
+        ↓
+Business Insights
 
----
+# Data Processing (Python)
 
-# Key Business Questions
+Python was used to clean and transform the dataset.
 
-This project answers several important business questions:
+* Key preprocessing steps:
 
-* What is the total sales and profit?
-* Which regions generate the highest revenue?
-* Which product categories are most profitable?
-* Which products generate losses?
-* What is the monthly sales trend?
-* How do discounts impact profitability?
+-Standardizing column names
 
----
+-Converting data types
 
-# Repository Structure
+-Handling missing values
 
-data/ → Raw and cleaned datasets (stored locally)
+-Removing duplicate rows
 
-notebooks/ → Python notebooks for data analysis
+-Creating new analytical features
 
-sql/ → SQL schema and business analysis queries
+-New features created:
 
-docs/ → Project documentation
+-order_month
 
-scripts/ → Python automation scripts
+-month_number
 
-powerbi/ → Power BI dashboard files
+-ship_days
 
-report/ → Final project report
+-profit_margin
 
-README.md → Project documentation
+-discount_bucket
 
-requirements.txt → Python libraries used in project
+These features support deeper business analysis.
 
----
+# Database Layer (MySQL)
 
-# Dataset
+Database created:
 
-This project uses the **Superstore Sales Dataset**.
+automated_sales_bi
 
-Dataset Source:
-https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+Main table:
 
-Due to repository cleanliness and file size considerations, the dataset is **not stored in this repository**.
+superstore_clean
 
-After downloading, place the dataset here:
+The cleaned dataset is stored in MySQL and used for analytical queries.
 
-data/raw/superstore.csv
+# SQL Analysis
 
----
+SQL was used to analyze key business metrics including:
 
-# Expected Insights
+-Total Sales
 
-The dashboard will provide insights such as:
+-Total Profit
 
-* Sales and Profit KPIs
-* Regional performance comparison
-* Category and sub-category analysis
-* Discount impact analysis
-* Sales trends over time
-* Loss-making product identification
+-Total Orders
 
----
+-Average Order Value
+
+-Monthly Sales Trends
+
+-Regional Sales Performance
+
+-Category Profit Analysis
+
+-Product Sales & Profit Analysis
+
+# Analytical views created:
+
+-vw_monthly_sales_trend
+
+-vw_region_performance
+
+-vw_category_performance
+
+# Power BI Dashboard
+
+The dashboard provides interactive visual analysis.
+
+-KPI Metrics
+
+-Total Sales
+
+-Total Profit
+
+-Total Orders
+
+-Average Order Value
+
+* Visualizations
+
+-Monthly Sales Trend
+
+-Sales by Region
+
+-Profit by Category
+
+-Product Sales & Profit Table
+
+* Filters
+
+-Region
+
+-Category
+
+These features allow users to explore sales performance dynamically.
+
+# Automation Pipeline
+
+The project includes a Python automation script:
+
+**scripts/data_pipeline.py**
+
+This script automates the ETL process:
+
+-Reads raw CSV data
+
+-Cleans and preprocesses the dataset
+
+-Creates analytical features
+
+-Saves the cleaned dataset
+
+-Loads the data into MySQL
+
+# Run the pipeline using:
+
+**python scripts/data_pipeline.py**
+
+# Project Structure 
+Automated_Sales_BI_Dashboard
+│
+├── data
+│   ├── raw
+│   └── cleaned
+│
+├── scripts
+│   └── data_pipeline.py
+│
+├── sql
+├── powerbi
+├── docs
+│
+├── README.md
+└── requirements.txt
+
+# Key Business Insights
+
+This project helps analyze:
+
+-Sales performance across regions
+
+-Profitability by product category
+
+-Monthly business trends
+
+-Top performing products
+
+These insights help support data-driven decision making.
+
+# Future Improvements
+
+Possible enhancements:
+
+-Generic automation pipeline for multiple datasets
+
+-Scheduled data pipeline execution
+
+-Automated reporting
+
+-Advanced Power BI analytics
+
+
 
 # Author
 
-**Abhishek Kumar**
+Abhishek Kumar
 
 MCA Final Year Student
-Aspiring Data Analyst / ML Engineer
+Aspiring Data Analyst / BI Analyst / ML Engineer / Data Scientist
+
